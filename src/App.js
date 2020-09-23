@@ -1,14 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import React, {useState} from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import { ThemeProvider } from "styled-components";
 
 function App() {
-  return (
-    <div className="App">
-        <Navbar/>
-    </div>
-  );
+	return (
+		
+            <Navbar />
+         
+	);
 }
 
 export default App;
