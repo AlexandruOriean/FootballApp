@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import CarouselHomePage from "./components/pages/CarouselHomePage";
 import ChampionshipsList from './components/ChampionshipsList';
+import Standings from './components/Standings';
 import About from './components/pages/About';
 
 
@@ -23,9 +24,13 @@ function App() {
         /> 
         
         <Route
+          exact
           path='/championships'
           component={ChampionshipsList}
         />
+
+        <Route path='/championships/:id'
+          component={Standings}/>
         
       </div>
     </Router>

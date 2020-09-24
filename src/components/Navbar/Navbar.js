@@ -7,12 +7,12 @@ function Navbar() {
     <div>
       <ReactBootStrap.Navbar bg="dark" variant="dark">
         <Link to="/">
-          <ReactBootStrap.Navbar.Brand href="#home">
+          <ReactBootStrap.Navbar.Brand >
             Goal
           </ReactBootStrap.Navbar.Brand>
         </Link>
         <Link to='/about'>
-          <ReactBootStrap.Navbar.Brand href="#home">
+          <ReactBootStrap.Navbar.Brand >
             About
           </ReactBootStrap.Navbar.Brand>
         </Link>

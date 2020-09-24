@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Button, Col, Row, Container } from 'react-bootstrap';
-import Bundesliga from '../img/Bundesliga.png';
-import Eredivisie from '../img/Eredivisie.png';
-import LaLiga from '../img/LaLiga.png';
-import Ligue1 from '../img/Ligue1.png';
-import PremierLeague from '../img/PremierLeague.png';
-import SerieA from '../img/SerieA.png';
+import Standings from './Standings';
+// import Bundesliga from '../img/Bundesliga.png';
+// import Eredivisie from '../img/Eredivisie.png';
+// import LaLiga from '../img/LaLiga.png';
+// import Ligue1 from '../img/Ligue1.png';
+// import PremierLeague from '../img/PremierLeague.png';
+// import SerieA from '../img/SerieA.png';
 
 function ChampionshipsList() {
 	const [championships, setChampionship] = useState([
@@ -69,15 +70,17 @@ function ChampionshipsList() {
 	//     )
 	// }
 
-	const championshipList = championships.map((championship) => (
-		<Link
-					style={{ textDecoration: "none", textAlign: "center" }}
-			to={`/championships/${championship.id}`}>
-			
-    			<Button style={btnStyle}>{championship.name}</Button>
-			{/* <img src={require("../img/Bundesliga.png")} alt ="fuckkkkkkkkk"/> */}
-		</Link>
-  ));
+	const championshipList = championships.map((championship, index) => (
+    <Link
+      key={index}
+      style={{ textDecoration: "none", textAlign: "center" }}
+      to={`/championships/${championship.id}`}
+    >
+      <Button style={btnStyle}>{championship.name}</Button>
+      {/* <img src={require("../img/Bundesliga.png")} alt ="fuckkkkkkkkk"/> */}
+    </Link>
+	));
+	
 
 	return (
 	<Container>
@@ -93,7 +96,6 @@ function ChampionshipsList() {
 }
 
 const btnStyle = {
-	
 	margin: '10px',
 	padding: '5px'
 }
