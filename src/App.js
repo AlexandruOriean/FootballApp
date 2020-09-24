@@ -1,28 +1,46 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import CarouselHomePage from "./components/pages/CarouselHomePage";
-import ChampionshipsList from "./components/ChampionshipsList";
-import Standings from "./components/Standings";
-import About from "./components/pages/About";
-import PlayersList from "./components/PlayersList";
-import PlayerDetails from "./components/PlayerDetails";
+import ChampionshipsList from './components/ChampionshipsList';
+import Standings from './components/Standings';
+import About from './components/pages/About';
+// Theme
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./theme/GlobalStyles";
+import { lightTheme, darkTheme } from "./theme/Theme";
+import { useDarkMode } from './theme/useDarkMode';
+
+
+
 
 function App() {
-	return (
-		<Router>
-			<div className="App">
-				<Navbar />
-				<Route exact path="/" component={CarouselHomePage} />
-				<Route path="/about" component={About} />
-                <Route exact path="/players" component={PlayersList} />
-                <Route path="/players/:id" component={PlayerDetails}/>
-                <Route exact path="/championships" component={ChampionshipsList} />
-                <Route path="/championships/:id" component={Standings} />
-			</div>
-		</Router>
-	);
+  // const [theme, themeToggler] = useState('light');
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  
+
+  if (!mountedComponent) return <div></div>;
+  return (
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles />
+        <Router>
+          <div className="App">
+            <Navbar theme={theme} toggleTheme={themeToggler} />
+            <Route exact path="/" component={CarouselHomePage} />
+            <Route path="/about" component={About} />
+
+            <Route exact path="/championships" component={ChampionshipsList} />
+
+            <Route path="/championships/:id" component={Standings} />
+          </div>
+        </Router>
+      </>
+    </ThemeProvider>
+  );
+
 }
 
 export default App;
