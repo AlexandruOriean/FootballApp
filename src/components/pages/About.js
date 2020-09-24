@@ -3,8 +3,8 @@ import React from 'react'
 export default function About() {
     return (
       <React.Fragment>
-        <h1>About Football Application</h1>
-        <p>
+        <h1 style={{marginTop: '30px'}}>Facts about our <b>GOAL App.</b></h1>
+        <p style={{margin: '50px'}}>
           OneFootball is the only soccer app you need to follow thousands of
           teams and hundreds of leagues and competitions worldwide. Packed with
           all the latest news, videos, fixtures, scores, stats and key dates for
