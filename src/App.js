@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import CarouselHomePage from "./components/pages/CarouselHomePage";
-import TeamList from './components/TeamList';
+import ChampionshipsList from './components/ChampionshipsList';
 import About from './components/pages/About';
 
 
@@ -20,8 +20,12 @@ function App() {
         <Route
           path='/about'
           component={About}
-        />      
-          <TeamList />
+        /> 
+        
+        <Route
+          path='/championships'
+          component={ChampionshipsList}
+        />
         
       </div>
     </Router>
