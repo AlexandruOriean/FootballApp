@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { Button, Col, Row, Container } from 'react-bootstrap';
 import Bundesliga from '../img/Bundesliga.png';
 import Eredivisie from '../img/Eredivisie.png';
 import LaLiga from '../img/LaLiga.png';
@@ -69,25 +70,32 @@ function ChampionshipsList() {
 	// }
 
 	const championshipList = championships.map((championship) => (
-		<div>
-            <p>{championship.name}</p>
-            {/* <img src={require("../img/Bundesliga.png")} alt ="fuckkkkkkkkk"/> */}
-            
-		</div>
-	));
+		<Link
+					style={{ textDecoration: "none", textAlign: "center" }}
+			to={`/championships/${championship.id}`}>
+			
+    			<Button style={btnStyle}>{championship.name}</Button>
+			{/* <img src={require("../img/Bundesliga.png")} alt ="fuckkkkkkkkk"/> */}
+		</Link>
+  ));
 
 	return (
-		<div>
-			<Link
-				style={{ textDecoration: "none", textAlign: "center" }}
-				to="/championsList"
-			>
-                <p>{championshipList}</p>
-                
-                
-			</Link>
-		</div>
+	<Container>
+      	<Row>
+			<Col>				
+					{championshipList}				
+			</Col>
+		</Row>
+	</Container>
+					
+					
 	);
+}
+
+const btnStyle = {
+	
+	margin: '10px',
+	padding: '5px'
 }
 
 export default ChampionshipsList;
