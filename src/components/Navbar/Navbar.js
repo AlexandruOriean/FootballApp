@@ -4,7 +4,7 @@ import * as ReactBootStrap from "react-bootstrap";
 export default function Navbar() {
 	return (
 		<div>
-			<ReactBootStrap.Navbar bg="light" variant="light">
+			<ReactBootStrap.Navbar bg="dark" variant="dark">
 				<ReactBootStrap.Navbar.Brand href="#home">
 					Goal
 				</ReactBootStrap.Navbar.Brand>

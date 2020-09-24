@@ -2,15 +2,12 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 //  imported image as variable
 import teamsImg from "../../images/teams.jpg";
+import playersImg from "../../images/players.jpg";
+import coachesImg from "../../images/coaches.jpg";
 
-//  Component function should have the same name as the file
-function Home() {
-    // const [index, setIndex] = useState(0);
 
-    // const handleSelect = (selectedIndex, e) => {
-    //     setIndex(selectedIndex);
-    // };
-
+function CarouselHomePage() {
+   
     return (
         <Carousel>
             <Carousel.Item>
@@ -20,44 +17,42 @@ function Home() {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
+                    <h3 style={h3Style}>Teams</h3>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={teamsImg}
+                    src={playersImg}
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <h3 style={h3Style}>Players</h3>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={teamsImg}
+                    src={coachesImg}
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.
-                    </p>
+                    <h3 style={h3Style}>Coaches</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
     );
 }
 
-export default Home;
+const h3Style = {
+    backgroundColor: 'black',
+    color: 'white',
+    decoration : 'none'
+}
+
+export default CarouselHomePage;
+
