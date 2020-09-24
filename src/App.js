@@ -1,23 +1,32 @@
-import React, { useState, Fragment } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import ChampionshipsList from "./components/ChampionshipsList";
-import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Switch from "react-bootstrap/esm/Switch";
+import CarouselHomePage from "./components/pages/CarouselHomePage";
+import TeamList from './components/TeamList';
+import About from './components/pages/About';
+
 
 function App() {
-	return (
-		<Router>
-            <Fragment >
-                <Route path="/championsList/:id"
-                    // component = {}
-                />
-				<Navbar />
-				<ChampionshipsList />
-			</Fragment>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Route
+          exact
+          path="/"
+          component = {CarouselHomePage}        
+        />
+        <Route
+          path='/about'
+          component={About}
+        />      
+          <TeamList />
+        
+      </div>
+    </Router>
+  );
+
 }
 
 export default App;
