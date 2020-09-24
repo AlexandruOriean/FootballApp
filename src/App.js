@@ -1,16 +1,30 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import { ThemeProvider } from "styled-components";
-import PlayersList from "./components/PlayersList";
+import CarouselHomePage from "./components/pages/CarouselHomePage";
+import TeamList from './components/TeamList';
+import About from './components/pages/About';
+
 
 function App() {
   return (
-    <div>
-      <Navbar />;
-      <PlayersList />;
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Route
+          exact
+          path="/"
+          component = {CarouselHomePage}        
+        />
+        <Route
+          path='/about'
+          component={About}
+        />      
+          <TeamList />
+        
+      </div>
+    </Router>
   );
 }
 

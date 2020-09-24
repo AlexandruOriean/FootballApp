@@ -16,7 +16,6 @@ function TeamList() {
 
 	return (
 		<div>
-			<p>{team}</p>
 			<button>Click Me</button>
 		</div>
 	);
