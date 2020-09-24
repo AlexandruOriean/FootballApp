@@ -8,7 +8,7 @@ function Navbar() {
       <ReactBootStrap.Navbar bg="dark" variant="dark">
         <Link to="/">
           <ReactBootStrap.Navbar.Brand >
-            Goal
+            <b>GOAL App.</b>
           </ReactBootStrap.Navbar.Brand>
         </Link>
         <Link to='/about'>
