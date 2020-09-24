@@ -1,7 +1,7 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 
-export default function Navbar() {
+function Navbar() {
 	return (
 		<div>
 			<ReactBootStrap.Navbar bg="dark" variant="dark">
@@ -26,3 +26,5 @@ export default function Navbar() {
 		</div>
 	);
 }
+
+export default Navbar;
