@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function PlayersList() {
-    state = {
-        players: [],
-    };
-    
     const [players, setPlayers] = useState([]);
-
 
     useEffect(() => {
         const config = {
@@ -18,7 +13,6 @@ function PlayersList() {
                 "X-Auth-Token": "00790e41e6fc4447b2e54f2afd7d82dd",
             },
         };
-      
 
         axios(config)
             .then((response) => {
@@ -27,12 +21,8 @@ function PlayersList() {
             .catch((error) => {
                 console.log(error);
             });
-      
-        return <div>{player}</div>;
-
-      
-    }
-    
+    });
+    return <div>{players}</div>;
 }
 
 export default PlayersList;

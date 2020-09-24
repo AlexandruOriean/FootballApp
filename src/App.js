@@ -3,13 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import { ThemeProvider } from "styled-components";
-import PlayerList from "./components/PlayersList";
+import PlayersList from "./components/PlayersList";
 
 function App() {
   return (
     <div>
       <Navbar />;
-      <PlayerList />;
+      <PlayersList />;
     </div>
   );
 }
