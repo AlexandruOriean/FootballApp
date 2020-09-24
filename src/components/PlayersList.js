@@ -17,6 +17,7 @@ function PlayersList() {
         axios(config)
             .then((response) => {
                 console.log(JSON.stringify(response.data));
+                setPlayers(response.data)
             })
             .catch((error) => {
                 console.log(error);

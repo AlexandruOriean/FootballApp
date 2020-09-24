@@ -53,16 +53,16 @@ export default function Standings() {
               <td title="Team points">Pts</td>
             </tr>
             {standings.table.map((team, i) => (
-              <tr>
-                <td className="team-position">{team.position}</td>
-                <Link>
+              <tr key={i}>
+                <td className="team-position" >{team.position}</td>
+                {/* <Link> */}
                   <td className="team-name">
                     <div className="crest">
                       <img src={team.team.crestUrl} alt="" />
                     </div>
                     <span>{team.team.name}</span>
                   </td>
-                </Link>
+                {/* </Link> */}
                 <td>{team.playedGames}</td>
                 <td>{team.won}</td>
                 <td>{team.draw}</td>
