@@ -21,41 +21,41 @@ img {
   height: 750px;
 }
 
-.standings{
+.standings {
   margin: 0 auto;
   border-collapse: collapse;
 }
 
 .standings .table-head,
-.standings .team-position{
-  color: #878787; 
+.standings .team-position {
+  color: #878787;
 }
 
-.standings .team-position{
+.standings .team-position {
   text-align: left;
 }
 
-.standings tr{
+.standings tr {
   border-bottom: 1px solid #dedede;
   line-height: 2.3em;
 }
 
-.standings tr:last-child{
+.standings tr:last-child {
   border: none;
 }
 
-.standings td{
+.standings td {
   width: 35px;
 }
 
-.standings .team-name{
+.standings .team-name {
   width: 250px;
   text-align: left;
   display: flex;
   align-items: center;
 }
 
-.crest{
+.crest {
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -63,16 +63,28 @@ img {
   justify-content: center;
 }
 
-.crest img{
+.crest img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.standings .team-points{
+.standings .team-points {
   font-weight: bold;
 }
 
 .about {
   padding: 10px;
-  
+}
+
+.big-logo img {
+  max-block-size: 100px;
+  padding-top: 20px;
+}
+
+.logo-head {
+  text-align: center;
+  column-span: 3;
+  columns: 3;
+  padding-top: 20px;
+  margin-top: 20px;
 }

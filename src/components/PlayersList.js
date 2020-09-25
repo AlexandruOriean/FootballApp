@@ -34,30 +34,45 @@ function PlayersList() {
     width: "80%",
   };
 
+  const headerStyle = {
+    fontWeight: "bold",
+  };
+
   return (
-    <table className="standings" style={style}>
-      <tbody>
-        <tr style={{ columnSpan: "3" }}>
-          <h1>{players.name}</h1>
-        </tr>
-        <tr className="table-head">
-          <td className="player-name">Player Name</td>
-          <td className="player-position">Position</td>
-          <td className="player-nationality">Nationality</td>
-        </tr>
-        {players.squad.map((player, i) => (
-          <tr>
-            <Link>
-              <td className="player-name" style={{ whiteSpace: "nowrap" }}>
-                {player.name}
-              </td>
-            </Link>
-            <td>{player.position}</td>
-            <td>{player.nationality}</td>
+    <div>
+      <div className="big-logo">
+        <img
+          src={players.crestUrl}
+          alt=""
+          verticalAlign="text-top"
+          height="10px"
+          position="inline"
+        />
+        <h1 style={{ fontWeight: "bold", fontFamily: "Roboto" }}>
+          {players.name}
+        </h1>
+      </div>
+      <table className="standings" style={style}>
+        <tbody>
+          <tr className="table-head">
+            <td className="player-name">Player Name</td>
+            <td className="player-position">Position</td>
+            <td className="player-nationality">Nationality</td>
           </tr>
-        ))}
-      </tbody>
-    </table>
+          {players.squad.map((player, i) => (
+            <tr>
+              <Link to={`player/${player.id}`}>
+                <td className="player-name" style={{ whiteSpace: "nowrap" }}>
+                  {player.name}
+                </td>
+              </Link>
+              <td>{player.position}</td>
+              <td>{player.nationality}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
