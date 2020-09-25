@@ -8,13 +8,13 @@ export default function Standings() {
   useEffect(() => {
     const allUrl = window.location.href;
     const id = allUrl.split("/").reverse()[0];
-    console.log(allUrl);
-    console.log(id);
+    // console.log(allUrl);
+    // console.log(id);
     var config = {
       method: "get",
       url: `https://api.football-data.org/v2/competitions/${id}/standings`,
       headers: {
-        "X-Auth-Token": "00790e41e6fc4447b2e54f2afd7d82dd",
+        "X-Auth-Token": "b75f515919a94829830c8199beb46c05",
       },
     };
 
