@@ -31,7 +31,7 @@ function PlayersList() {
   }
 
   return players.squad.map((player, i) => (
-    <Link>
+    <Link to={`player/${player.id}`}>
       <p>
         {player.name} {"-"} {player.position};
       </p>

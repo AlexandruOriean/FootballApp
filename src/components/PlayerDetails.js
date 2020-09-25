@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -22,6 +21,7 @@ function PlayerDetails() {
     
         axios(config)
             .then((response) => {
+                console.log(response.data);
                 setPlayerDetails(response.data);
             })
             .catch((error) => {
@@ -37,8 +37,9 @@ function PlayerDetails() {
 
     
     return (
+        console.log(playerDetails),
         <div>
-
+            <p>{playerDetails.name}</p>
         </div>
 
       );

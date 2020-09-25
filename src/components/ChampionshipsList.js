@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 // import axios from "axios";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { Button, Col, Row, Container } from 'react-bootstrap';
-import Standings from './Standings';
+
 // import Bundesliga from '../img/Bundesliga.png';
 // import Eredivisie from '../img/Eredivisie.png';
 // import LaLiga from '../img/LaLiga.png';

@@ -8,8 +8,8 @@ export default function Standings() {
   useEffect(() => {
     const allUrl = window.location.href;
     const id = allUrl.split("/").reverse()[0];
-    console.log(allUrl);
-    console.log(id);
+    // console.log(allUrl);
+    // console.log(id);
     var config = {
       method: "get",
       url: `https://api.football-data.org/v2/competitions/${id}/standings`,
@@ -52,7 +52,7 @@ export default function Standings() {
           {standings.table.map((team, i) => (
             <tr>
               <td className="team-position">{team.position}</td>
-              <Link to={`/players/${team.team.id}`}>
+              <Link to={`/players/${team.team.id}`} key={i}>
                 <td className="team-name">
                   <div className="crest">
                     <img src={team.team.crestUrl} alt="" />
