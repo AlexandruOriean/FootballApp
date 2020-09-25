@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -26,7 +26,7 @@ function App() {
   if (!mountedComponent) return <div></div>;
   return (
     <ThemeProvider theme={themeMode}>
-      <>
+      <Fragment>
         <GlobalStyles />
         <Router>
           <div className="App">
@@ -39,7 +39,7 @@ function App() {
             <Route path="/player/:id" component={PlayerDetails} />
           </div>
         </Router>
-      </>
+      </Fragment>
     </ThemeProvider>
   );
 
