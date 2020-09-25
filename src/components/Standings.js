@@ -14,7 +14,7 @@ export default function Standings() {
       method: "get",
       url: `https://api.football-data.org/v2/competitions/${id}/standings`,
       headers: {
-        "X-Auth-Token": "00790e41e6fc4447b2e54f2afd7d82dd",
+        "X-Auth-Token": "b75f515919a94829830c8199beb46c05",
       },
     };
 
@@ -50,7 +50,7 @@ export default function Standings() {
             <td title="Team points">Pts</td>
           </tr>
           {standings.table.map((team, i) => (
-            <tr>
+            <tr key={i}>
               <td className="team-position">{team.position}</td>
               <Link to={`/players/${team.team.id}`} key={i}>
                 <td className="team-name">
