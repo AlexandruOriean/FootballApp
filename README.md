@@ -1,3 +1,12 @@
+# Football app API
+A React app that displays the info fetched from football-data.org API.
+
+![football-app-index-page][1]</a>
+[1]: 
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
