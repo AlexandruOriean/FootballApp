@@ -1,8 +1,9 @@
 # Football app API
 A React app that displays the info fetched from football-data.org API.
 
-![football-app-index-page][1]</a>
-[1]: 
+<img src="public/index-page.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px; width: 100px" />
 
 
 
