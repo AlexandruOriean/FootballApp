@@ -1,4 +1,4 @@
-# Football app API
+# GOAL app API
 ## A React app that displays the info fetched from football-data.org API.
 
 <img src="public/index-page.png"
