@@ -29,10 +29,7 @@ function PlayersList() {
     if (players.squad === undefined) {
         return <h3>Loading...</h3>;
     }
-    const style = {
-        Color: "#aaa",
-        width: "80%",
-    };
+   
 
     return (
         <div>
@@ -61,7 +58,7 @@ function PlayersList() {
                                 className="player-name"
                                 style={{ whiteSpace: "nowrap" }}
                             >
-                                <Link to={`player/${player.id}`}>
+                                <Link to={`/player/${player.id}`}>
                                     {player.name}
                                 </Link>
                             </td>
@@ -76,3 +73,8 @@ function PlayersList() {
 }
 
 export default PlayersList;
+
+ const style = {
+        Color: "#aaa",
+        width: "80%",
+    };

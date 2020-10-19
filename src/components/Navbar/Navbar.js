@@ -13,7 +13,6 @@ const Button = styled.button`
   padding: 0.6rem;
 `;
 
-
 const Navbar = ({ theme, toggleTheme }) => {
   return (
     <div>
@@ -32,18 +31,22 @@ const Navbar = ({ theme, toggleTheme }) => {
           />
           <ReactBootStrap.Button variant="outline-primary">
             Search
-            </ReactBootStrap.Button>
+          </ReactBootStrap.Button>
         </ReactBootStrap.Form>
-        <ReactBootStrap.Button onClick={toggleTheme} style={{marginLeft: '5px'}}>Switch Theme</ReactBootStrap.Button>
-        </ReactBootStrap.Navbar>
+        <ReactBootStrap.Button
+          onClick={toggleTheme}
+          style={{ marginLeft: "5px" }}
+        >
+          Switch Theme
+        </ReactBootStrap.Button>
+      </ReactBootStrap.Navbar>
     </div>
   );
-}; 
-
-Navbar.propTypes = {
-    theme: string.isRequired,
-    toggleTheme: func.isRequired,
 };
 
+Navbar.propTypes = {
+  theme: string.isRequired,
+  toggleTheme: func.isRequired,
+};
 
 export default Navbar;
