@@ -2,7 +2,17 @@
 ## A React app that displays the info fetched from football-data.org API.
 
 <img src="public/index-page.png"
-     alt="Markdown Monster icon"
+     alt="indexs page screen capture"
+     style="float: left; margin-right: 10px; width: 100px" />
+     
+     
+<img src="public/leagues.png"
+     alt="Leagues page screen capture"
+     style="float: left; margin-right: 10px; width: 100px" />
+     
+     
+<img src="public/standings.png"
+     alt="Standings page screen capture"
      style="float: left; margin-right: 10px; width: 100px" />
      
  
