@@ -1,11 +1,21 @@
 # Football app API
-A React app that displays the info fetched from football-data.org API.
+## A React app that displays the info fetched from football-data.org API.
 
 <img src="public/index-page.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px; width: 100px" />
-
-
+     
+ 
+GOAL app is the only soccer app you need to follow thousands of teams and hundreds of leagues and competitions worldwide. Packed with all the latest news, videos, fixtures, scores, stats and key dates for your favorite teams during the pre-season. From the Premier League, Champions League ,LaLiga, Bundesliga and much more.
+<ul>
+     <li>All Leagues.</li>
+     <li>All Competitions.</li>  
+     <li>Fixtures</li>  
+     <li>Standings</li>  
+     <li>Players details</li>  
+     <li>Teams details</li> 
+</ul>
+ 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
