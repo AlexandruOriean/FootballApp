@@ -57,7 +57,7 @@ function PlayersList() {
           </tr>
           {players.squad.map((player, i) => (
             <tr>
-              <Link to={`player/${player.id}`}>
+              <Link to={`/player/${player.id}`}>
                 <td className="player-name" style={{ whiteSpace: "nowrap" }}>
                   {player.name}
                 </td>
